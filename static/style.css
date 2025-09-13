@@ -1,0 +1,158 @@
+/* Background Gradient */
+body {
+  margin: 0;
+  font-family: 'Segoe UI', sans-serif;
+  background: linear-gradient(135deg, #1d2671, #c33764);
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #fff;
+}
+
+.wrapper {
+  width: 650px;
+  text-align: center;
+}
+
+/* Title */
+h1 {
+  font-size: 36px;
+  margin-bottom: 10px;
+}
+.subtitle {
+  font-size: 16px;
+  opacity: 0.8;
+  margin-bottom: 20px;
+}
+
+/* Upload Box */
+.upload-box {
+  background: rgba(255,255,255,0.1);
+  border: 2px dashed rgba(255,255,255,0.4);
+  border-radius: 20px;
+  padding: 30px;
+  transition: 0.3s;
+  backdrop-filter: blur(12px);
+}
+.upload-box:hover {
+  background: rgba(255,255,255,0.2);
+  transform: scale(1.02);
+}
+.file-label {
+  display: block;
+  margin-bottom: 15px;
+  font-size: 18px;
+}
+.btn {
+  background: #ff9800;
+  padding: 12px 25px;
+  border: none;
+  border-radius: 25px;
+  font-size: 16px;
+  cursor: pointer;
+  color: #fff;
+  transition: 0.3s;
+}
+.btn:hover {
+  background: #e68900;
+}
+
+/* Image Preview */
+#img-preview {
+  max-width: 300px;
+  margin-top: 15px;
+  border-radius: 15px;
+  box-shadow: 0 8px 20px rgba(0,0,0,0.4);
+  animation: fadeZoom 0.8s ease-in-out;
+}
+@keyframes fadeZoom {
+  from {opacity: 0; transform: scale(0.8);}
+  to {opacity: 1; transform: scale(1);}
+}
+
+/* Loader */
+.loader {
+  margin: 20px auto;
+  text-align: center;
+}
+.pulse-brain {
+  font-size: 40px;
+  animation: pulse 1.5s infinite;
+}
+@keyframes pulse {
+  0%, 100% {transform: scale(1);}
+  50% {transform: scale(1.2);}
+}
+
+/* Results Card */
+.result-card {
+  margin-top: 25px;
+  padding: 25px;
+  background: rgba(255,255,255,0.1);
+  border-radius: 20px;
+  backdrop-filter: blur(10px);
+  text-align: center;
+  box-shadow: 0 4px 25px rgba(0,0,0,0.4);
+}
+
+/* Confidence Gauge */
+.gauge {
+  position: relative;
+  width: 120px;
+  height: 120px;
+  margin: 15px auto;
+}
+.gauge svg {
+  transform: rotate(-90deg);
+  width: 120px;
+  height: 120px;
+}
+.gauge circle {
+  fill: none;
+  stroke-width: 10;
+  stroke-linecap: round;
+}
+.gauge .bg {
+  stroke: rgba(255,255,255,0.3);
+}
+.gauge .progress {
+  stroke: #00e676;
+  stroke-dasharray: 283;
+  stroke-dashoffset: 283;
+  transition: stroke-dashoffset 1s ease;
+}
+.gauge-text {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 18px;
+  font-weight: bold;
+}
+
+/* Probability Bars */
+.prob-bar {
+  margin: 10px 0;
+}
+.prob-bar span {
+  font-size: 14px;
+  display: block;
+  margin-bottom: 4px;
+}
+.bar {
+  height: 10px;
+  border-radius: 5px;
+  background: rgba(255,255,255,0.2);
+  overflow: hidden;
+}
+.bar-fill {
+  height: 10px;
+  border-radius: 5px;
+  transition: width 0.6s ease-in-out;
+}
+
+/* Hide elements */
+.hidden {
+  display: none;
+}
